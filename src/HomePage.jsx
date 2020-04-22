@@ -8,11 +8,11 @@ export default function HomePage() {
   const { state, dispatch } = useContext(Store);
 
   useEffect(() => {
-    state.episodes.length === 0 && fetchDataAction(dispatch);
+    state.characters.length === 0 && fetchDataAction(dispatch);
   }, [dispatch, state]);
 
   const props = {
-    episodes: state.episodes,
+    characters: state.characters,
     state: { state, dispatch },
     toggleFavAction,
     favourites: state.favourites,

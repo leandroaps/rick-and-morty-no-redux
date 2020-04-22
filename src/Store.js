@@ -3,14 +3,14 @@ import React, { createContext, useReducer } from 'react';
 export const Store = createContext();
 
 const initialState = {
-  episodes: [],
+  characters: [],
   favourites: [],
 };
 
 function reducer(state, action) {
   switch (action.type) {
     case 'FETCH_DATA':
-      return { ...state, episodes: action.payload };
+      return { ...state, characters: action.payload };
     case 'ADD_FAV':
       return {
         ...state,
