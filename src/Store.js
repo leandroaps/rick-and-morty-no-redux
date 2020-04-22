@@ -4,7 +4,7 @@ export const Store = createContext();
 
 const initialState = {
   episodes: [],
-  favourites: []
+  favourites: [],
 };
 
 function reducer(state, action) {
@@ -14,12 +14,12 @@ function reducer(state, action) {
     case 'ADD_FAV':
       return {
         ...state,
-        favourites: [...state.favourites, action.payload]
+        favourites: [...state.favourites, action.payload],
       };
     case 'REMOVE_FAV':
       return {
         ...state,
-        favourites: action.payload
+        favourites: action.payload,
       };
     default:
       return state;

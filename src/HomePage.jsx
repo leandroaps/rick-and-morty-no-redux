@@ -15,13 +15,13 @@ export default function HomePage() {
     episodes: state.episodes,
     state: { state, dispatch },
     toggleFavAction,
-    favourites: state.favourites
+    favourites: state.favourites,
   };
 
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
-        <div className="card-columns">
+        <div className='card-columns mt-5 p-4'>
           <EpisodesList {...props} />
         </div>
       </Suspense>

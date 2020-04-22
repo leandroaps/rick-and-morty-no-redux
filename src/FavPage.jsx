@@ -11,12 +11,12 @@ export default function FavPage() {
     episodes: state.favourites,
     state: { state, dispatch },
     toggleFavAction,
-    favourites: state.favourites
+    favourites: state.favourites,
   };
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <div className="episode-layout">
+      <div className='card-columns mt-5 p-4'>
         <EpisodesList {...props} />
       </div>
     </Suspense>
